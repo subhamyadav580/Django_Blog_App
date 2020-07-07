@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+{% for account in accounts %}
+<p>{{account.email}}</p>
+<p>{{account.date_joined}}</p>
+{% endfor %}
+
+{% endblock content %}
