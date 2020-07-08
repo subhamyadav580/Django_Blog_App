@@ -6,6 +6,15 @@
     <title>Document</title>
 </head>
 <body>
+    {% if request.user.is_authenticated %}
+    <a href="{% url 'home' %}">Home</a> |
+   <a href="{% url 'logout' %}">Logout</a> |
+   <h1>Hello {{request.user.username}}  </h1>
+      {% else %}
+      <a href="{% url 'home' %}">Home</a> |
+       <a href="{% url 'register' %}">Register</a> |
+       <a href="{% url 'login' %}">Login</a> |
+    {% endif %}
     {% block content %}
       
     {% endblock content %}
