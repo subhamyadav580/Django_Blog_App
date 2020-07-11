@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 <style>
     .form-signin {
@@ -49,46 +49,23 @@
 </style>
 <form class="form-signin" method="POST">
     {% csrf_token %}
-    <h1 class="h3 mb-3 font-weight-normal" style="text-align: center;">Register</h1>
+    <div class="d-flex flex-column pb-3">
+        <img class="img-fluid mx-auto" src="{% static '332432_1_org_258071_1_org_image_6ce585b4e6fa432c.jpg' %}" alt="Shubham Logo" width="72" height="72">
+    </div>
+    <h1 class="h3 mb-3 font-weight-normal" style="text-align: center;">Register an account</h1>
     <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
     <input name="username" type="text" id="inputUsername" class="form-control" placeholder="Username" required>
-    <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-    <input name="password1" type="password" id="inputPassword" class="form-control" placeholder="Confirmation Password" required>
+    <input name="password1" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <input name="password2" type="password" id="inputPassword" class="form-control" placeholder="Confirmation Password" required>
 
-    {% for field in login_form %}
-    {% for error in  field.errors%}
-    <p style="color: red;">{{error}}</p>
-    {% endfor %}
-    {% endfor %}
-
-    {% if login_form.non_field_errors %}
-    <div style="color: red;">
-        <p>
-            {{login_form.non_field_errors}}
-        </p>
-    </div>
-    {% endif %}
+    {% for field in registration_form %}
+        {% for error in  field.errors%}
+          <p style="color: red;">
+              {{error}}
+          </p>
+        {% endfor %}
+  {% endfor %}
     <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
 </form>
 
-<!-- <form method="POST">
-{% csrf_token %}
-{% for field in registration_form %}
-  <p>
-      {{field.label_tag}}
-      {{field}}
-
-      {% if field.help_text %}
-        <small style="color: grey;">{{field.help_text}}</small>
-      {% endif %}
-      {% for error in  field.errors%}
-        <p style="color: red;">
-            {{error}}
-        </p>
-      {% endfor %}
-  </p>
-{% endfor %}
-<button type="submit">Register</button>
-</form> -->
-  
 {% endblock content %}

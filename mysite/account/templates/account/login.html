@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 <style>
     .form-signin {
@@ -39,6 +39,9 @@
 </style>
 <form class="form-signin" method="POST">
     {% csrf_token %}
+<div class="d-flex flex-column pb-3">
+    <img class="img-fluid mx-auto" src="{% static '332432_1_org_258071_1_org_image_6ce585b4e6fa432c.jpg' %}" alt="Shubham Logo" width="72" height="72">
+</div>
     <h1 class="h3 mb-3 font-weight-normal" style="text-align: center;">Log In</h1>
     <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
     <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
@@ -57,6 +60,9 @@
     {% endif %}
     <button class="btn btn-lg btn-primary btn-block" type="submit">Log In</button>
 </form>
-
+<div class="d-flex flex-column">
+    <a class="m-auto" href="{% url 'password_reset' %}">Reset Password</a>
+</div>
+  
 
 {% endblock content %}
