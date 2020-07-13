@@ -1,3 +1,12 @@
 # blog_app
 
-The Blogger app allows you to post, edit, save, and view your blog posts
+<h3>This project includes</h3>
+<ul>
+<li>Register, update, authenticate, delete users</li>
+<li>Blog posting (Create, Retrieve, Update, Delete - CRUD)</li>
+<li>Building an admin panel</li>
+<li>Bootstrap</li>
+<li>HTML</li>
+<li>CSS</li>
+</ul>
+
