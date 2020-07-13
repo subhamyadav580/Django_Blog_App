@@ -9,5 +9,6 @@
 <li>HTML</li>
 <li>CSS</li>
 </ul>
-
+<br>
+<hr>
 <img src="Screenshot_2020-07-13 Document.png">
