@@ -37,8 +37,16 @@
             box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
         }
         .footer{
-            min-width: 100px;
+            min-height: 100px;
         }
+
+	.search-bar{
+		max-width: 500px;
+		width: 100%;
+	}
+	form{
+		width: 100%;
+	}
     </style>
 </head>
 
@@ -50,8 +58,8 @@
             {% endif %}
         </h5>
         <div class="search-bar mt-sm-2 mr-2">
-            <form action="get">
-                <input type="text" class="form-control" name="q">
+            <form method="get">
+                <input class="form-control"  type="text" name="q" id="id_q" placeholder="Search...">
             </form>
         </div>
         <nav class="my-2 my-md-0 mr-md-3">
@@ -74,7 +82,7 @@
     </div>
 <hr>
     <footer>
-        <div class="d-flex flex-row align-items-center footer">
+        <div class="d-flex flex-row align-items-center footer bg-white  shadow-lg">
             <p class="m-auto">Shubham Yadav | 2020</p>
     
         </div>
