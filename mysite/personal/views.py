@@ -5,7 +5,7 @@ from blog.views import get_blog_queryset
 from django.core.paginator import EmptyPage, Paginator, PageNotAnInteger
 # Create your views here.
 
-BLOG_POSTS_PER_PAGE = 1
+BLOG_POSTS_PER_PAGE = 2
 
 def home_screen_view(request):
     context = {}
