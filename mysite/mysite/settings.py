@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'personal.apps.PersonalConfig',
     'account.apps.AccountConfig',
     'blog.apps.BlogConfig',
+    'social_django',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -140,4 +142,23 @@ if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 else:
     pass
+
+
+
+AUTHENTICATION_BACKENDS = [
+    'social_core.backends.linkedin.LinkedinOAuth2',
+    'social_core.backends.instagram.InstagramOAuth2',
+    'social_core.backends.facebook.FacebookOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+]
+
+
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = ''
+LOGOUT_URL = 'logout'
+LOGOUT_REDIRECT_URL = 'login'
+
+
+SOCIAL_AUTH_FACEBOOK_KEY = '326473945183676'        # App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = '5c75e373ab5f91fc8168bf666efa6b4f'  # App Secret
 

@@ -1,0 +1,21 @@
+{% extends "admin/base.html" %}
+
+{% block title %}{{ title }} | Shubham{% endblock %}
+{% block extrastyle %}
+<style>
+    body{
+        background-color: green;
+    }
+</style>
+
+{% endblock %}
+<style>
+    body{
+        background-color: blue;
+    }
+</style>
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">shubham</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
