@@ -9,6 +9,9 @@ from blog.api.serializers import BlogPostSerializer
 
 
 
+
+
+
 @api_view(['GET',])
 def api_detail_blog_view(request, slug):
 
