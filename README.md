@@ -9,6 +9,7 @@
 <li>HTML</li>
 <li>CSS</li>
 <li>Rest APIs </li>
+<li>Token Authentication</li>
 </ul>
 <br>
 <hr>
